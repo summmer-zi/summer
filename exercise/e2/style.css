@@ -1,0 +1,120 @@
+.painting-1 {
+    display: grid;
+    width: 600px;
+    height:600px;
+    background-color: lightgray;
+    
+    /*for testing*/
+    border:1px solid black;
+    grid-template-columns: repeat(15,1fr);
+    grid-template-rows: repeat(15,1fr);
+}
+
+div {
+    display: block;
+
+}
+
+.cream {
+    background-color: ivory; 
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.border-right{
+    border-right: 20px solid #4D4D42;
+}
+
+.border-bottom{
+    border-bottom: 20px solid #4D4D42;
+}
+
+.navy {
+    background-color: #282B36;
+}
+
+.green {
+    background-color: #d4ecc0;
+}
+
+.dkyellow {
+    background-color: #F6C647;
+}
+
+.dkblue {
+    background-color: #3C85E0;
+}
+
+.dknavy {
+    background-color: #2A2E36;
+}
+
+.dkgreen {
+    background-color: #4F9C6E;
+}
+
+.pink {
+    background-color: #F5D5D2;
+}
+
+.lgblue{
+    background-color: #265BD9;
+}
+
+.dkred {
+    background-color: #E3544D;
+}
+
+.blue2 {
+    background-color: #133da0;
+}
+
+.dkblack {
+    background-color: #222022;
+}
+
+.dkorange {
+    background-color: #F19F4E;
+}
+
+.dkgreen {
+    background-color: #488A70;
+}
+
+.babyblue {
+    background-color: #50A2CF;
+}
+
+.orange {
+    background-color: #EC744C;
+}
+
+.lgorange {
+    background-color: #D94F45;
+}
+
+.y1 {
+    background-color: #91562C;
+}
+
+.y2 {
+    background-color: #A2652B;
+}
+
+.y3 {
+    background-color: #B28930
+}
+
+.y4 {
+    background-color: #A57B29;
+}
