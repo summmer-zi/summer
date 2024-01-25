@@ -1,0 +1,407 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #cceeff;
+}
+
+body.page3 {
+    background-color: #0b0c0d; /* 페이지 3의 배경 색상 설정 */
+}
+
+
+.snowfall-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.snowfall {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+    top: -25px;
+}
+
+.blurred {
+    filter: blur(3px);
+}
+
+@keyframes snowfall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.snowfall:nth-child(1) {
+    left: 10%;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+
+.snowfall:nth-child(2) {
+    left: 20%;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+.snowfall:nth-child(3) {
+    left: 30%;
+    animation-duration: 2.5s;
+    animation-delay: 1.5s;
+}
+
+.snowfall:nth-child(4) {
+    left: 40%;
+    animation-duration: 3.5s;
+    animation-delay: 2s;
+}
+
+.snowfall:nth-child(5) {
+    left: 50%;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+}
+
+.snowfall:nth-child(6) {
+    left: 60%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.snowfall:nth-child(7) {
+    left: 70%;
+    animation-duration: 2.5s;
+    animation-delay: 3.5s;
+}
+
+.snowfall:nth-child(8) {
+    left: 80%;
+    animation-duration: 3.5s;
+    animation-delay: 4s;
+}
+
+
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px; 
+    background-color: #fff; 
+    box-shadow: 0px 0px 20px 5px #fff; 
+}
+
+
+.tree {
+    position: absolute;
+    width: 40px;
+    height: 100px;
+    bottom: 200px; 
+}
+
+.tree-container {
+    position: absolute;
+    top: 80%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between; 
+    width: 80%; 
+}
+
+
+.tree3 {
+    position: relative;
+    width: 40px;
+    height: 100px;
+    bottom: 140px; 
+    margin-right: 50px;
+}
+
+.white-triangle3 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 200px solid #fff; 
+    bottom: 180px; 
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(10px);
+}
+
+.left {
+    left: 10%;
+}
+
+.right {
+    left: 80%;
+}
+
+.trunk {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background-color: #764b2c; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foliage {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 200px solid #248624; 
+    bottom: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.white-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 200px solid #fff; 
+    bottom: -100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(10px);
+}
+
+
+.moirai-one-regular {
+    font-family: "Moirai One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    text-align: center;
+    color: #204fa5; 
+    bottom: 100px;
+}
+
+.text-star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    text-align: center;
+    color: #ffffff; 
+    bottom: 100px;
+    font-size: 40px; 
+}
+
+.text-container span {
+    display: block; 
+    font-size: 40px; 
+    line-height: 1.5; 
+}
+
+.next-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 20px; 
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: "Moirai One", system-ui;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+
+.goback-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 20px; 
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: "Moirai One", system-ui;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+
+.ice-skater {
+    position: absolute;
+    bottom: 80px; 
+    left: -100px; 
+    animation: skate 2s linear infinite; 
+    z-index: 1;
+}
+
+.ice-skater-body {
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    background-color: #2c81b9; 
+    border-radius: 10px; 
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ice-skater-legs {
+    position: absolute;
+    width: 40px;
+    height:30px;
+    background-color: #204fa5;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes skate {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(120vw);
+    }
+}
+
+.ice-skater-head {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ffd2c2; 
+    border-radius: 50%;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ice-skater-hair {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #b30e0e;
+    border-radius: 50% 50% 0 0;
+    bottom: 120px; 
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(1px);
+}
+
+/* 기존의 CSS 코드 유지 */
+
+/* 기존의 CSS 코드 유지 */
+
+.campfire {
+    position: absolute;
+    top: calc(50% + 120px); /* 수정된 부분 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* 원하는 크기로 조절하세요 */
+    height: 300px; /* 원하는 크기로 조절하세요 */
+    margin: 0 auto;
+  }
+  
+  /* 나머지 CSS 코드는 이전에 제시한 코드와 동일합니다 */
+  
+  
+  .log {
+    position: absolute;
+    width: 100%;
+    height: 50px; /* 나무 장작의 높이 조절 */
+    background: #764b2c; /* 나무 장작의 색상 */
+    bottom: -30px; /* 나무 장작의 위치 조절 */
+  }
+  
+  .fire {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  
+  .flame {
+    width: 20px; /* 불꽃 크기 조절 */
+    height: 60px; /* 불꽃 크기 조절 */
+    background: #ce1e04; /* 불꽃 색상 */
+    border-radius: 50%;
+    animation: fire 2s 0.15s ease-in-out infinite alternate;
+  }
+  
+  .red { background: #ce1e04; }
+  .orange { background: #fd980f; }
+  .yellow { background: #fde37b; }
+  .white { background: #fef1d9; }
+  
+ 
+  @keyframes fire {
+    0% {
+      transform: scaleY(1);
+    }
+    28%, 38%, 50%, 70%, 82%, 100% {
+      transform: scaleY(0.6);
+    }
+  }
+
+  .red-chair {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #b30e0e;
+    top: 70%;
+    left: -35%;
+    border-radius: 10px; 
+}
+
+.yellow-chair {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #204fa5;
+    top: 70%;
+    left: 120%;
+    border-radius: 10px; 
+}
+
+.person {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.head {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #f0c8c8;
+    border-radius: 50%;
+    top: -80%;
+    left: 8%;
+}
+
+  

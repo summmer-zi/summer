@@ -1,0 +1,47 @@
+.monospace {
+    font-family:monospace;
+}
+
+.adobe-font {
+    font-family: "quirwood-chunky", sans-serif;
+    font-weight: 400px;
+}
+
+.google-font {
+    font-family: 'Arvo', serif;
+
+    &:hover {
+        animation-name: slide-right;
+        animation-duration: 1s;
+    }
+}
+
+span {
+    display: block;
+}
+
+@font-face {
+    font-family: 'Bespoke-YfiX3V9vBy';
+    src: url('Bespoke-YfiX3V9vBy.eot');
+    src: url('Bespoke-YfiX3V9vBy.eot?#iefix') format('embedded-opentype'),
+       url('Bespoke-YfiX3V9vBy.woff') format('woff'),
+       url('Bespoke-YfiX3V9vBy.ttf') format('truetype'),
+       url('Bespoke-YfiX3V9vBy.svg#Bespoke-YfiX3V9vBy') format('svg');
+  }
+
+.self-hosted {
+    font-family:'Bespoke', sans-serif;
+    transition: color 750ms;
+
+    &:hover {
+        color: red;
+        transform: translateX(100px);
+    }
+}
+
+@keyframes slide-right {
+    to {transform: translateX(0);}
+    from{transform: translateX(100);}
+    
+}
+
