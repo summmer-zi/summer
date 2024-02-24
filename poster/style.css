@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+    height: 7000px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d060b; 
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.container {
+    position: absolute;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(13, 8, 19, 0.8), rgba(25, 41, 79, 0.8));
+}
+
+
+
+.graphic1, .graphic2, .graphic3 {
+    position: absolute;
+    border-radius: 50%; 
+    filter: blur(100px); 
+}
+
+.graphic1 {
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    animation: blink 6s infinite; 
+    background: radial-gradient(circle at top right, #000000, #2c4f9c);
+}
+
+.graphic2 {
+    top: 300px;
+    left: 80%;
+    width: 700px;
+    height: 700px;
+    animation: blink 4s infinite; 
+    background: radial-gradient(circle at top right, #2c4f9c, #0e0e0e);
+}
+
+.graphic3 {
+    top: 1500px;
+    left: 60px;
+    width: 1000px;
+    height: 1000px;
+    animation: blink 10s infinite; 
+    background: radial-gradient(circle at top right, #2c2f46, #2c4f9c);
+}
+
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.series-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    font-size: 200px;
+    font-family: "Regular 400 Italic", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    display: inline-block;
+}
+
+.series-title span {
+    font-family: "Playfair Display Black", serif;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.series-title:hover {
+    background: linear-gradient(120deg, #12275c 0%, #202020 100%);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    color: transparent; 
+}
+
+
+.star {
+    display: inline-block;
+    animation: rotateStar 2s linear infinite;
+  }
+  
+  @keyframes rotateStar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .star {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 100px;
+    font-family: "Regular", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    animation: rotateStar 2s linear infinite;
+    color: #ffffff;
+  }
+  
+  @keyframes rotateStar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .organization {
+    font-family: "Regular 400 Italic", serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+    text-align: left;
+    color: transparent;
+    background: linear-gradient(#2c4f9c,#c0bfbb);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    margin: 10px;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    text-decoration: none; 
+  }
+  
+
+  .organization-title {
+    font-family: "Regular 400 Italic", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    text-align: right;
+    color: #ffffff;
+    margin: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-decoration: none; 
+  }
+  
+  .organization-title:hover {
+    text-decoration: underline;
+    font-style: italic; 
+  }
+  
+  .organization-title:active {
+    color: #1e3a86;
+  }
+
+
+.event1 {
+    
+    border-radius: 8px;
+    margin-top: 3700px; 
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event1:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.event2 {
+    
+    border-radius: 8px;
+    margin-top: 2800px; 
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event2:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.event3 {
+    
+    border-radius: 8px;
+    margin-top: 4000px; 
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event3:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.event4 {
+    
+    border-radius: 8px;
+    margin-top: 3000px; 
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event4:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+.event-title1,
+.event-date1,
+.event-description1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.event-title2,
+.event-date2,
+.event-description2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.event-title3,
+.event-date3,
+.event-description3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.event-title4,
+.event-date4,
+.event-description4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    color: transparent; 
+    background: linear-gradient(#c0bfbb, #2c4f9c);
+    background-clip: text; 
+    -webkit-background-clip: text;
+    padding: 20px;
+    text-align: right;
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    right: 1px;
+}
+
+  
+  footer p {
+    margin: 5px 0; 
+  }
+  
+  
+
+  .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.event:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.event1,
+.event2,
+.event3,
+.event4 {
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.event1:hover,
+.event2:hover,
+.event3:hover,
+.event4:hover {
+    transform: scale(1.05);
+}
+
+
+
+.event1:hover::after,
+.event2:hover::after,
+.event3:hover::after,
+.event4:hover::after {
+    content: "Click me";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #555;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+.event1:hover::after,
+.event2:hover::after,
+.event3:hover::after,
+.event4:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+
