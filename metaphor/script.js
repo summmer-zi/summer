@@ -5,6 +5,7 @@ const splitWords = () => {
     const highlighted =
       text.startsWith(`website`) ||
       text.startsWith(`cereal`) ||
+      text.startsWith(`Hyeji`) ||
       text.startsWith(`Keywords`);
     return `<span class="word ${
       highlighted ? "highlighted" : null
