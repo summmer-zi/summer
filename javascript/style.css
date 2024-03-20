@@ -1,0 +1,17 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background: blue;
+}
+
+div {
+    box-shadow: 2px 2px 5px black;
+    transition: all;
+}
+
+.no-width {
+    width: 0 !important;
+}
