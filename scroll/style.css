@@ -1,0 +1,440 @@
+:root {
+  --color: #df3434;
+  --c1: #fff8f7;
+  --c2: #f92e2e;
+  --c3: #ffdc9c;
+  --gradient: linear-gradient(
+    60deg,
+    var(--c3),
+    var(--c2),
+    var(--c1),
+    var(--c2),
+    var(--c3)
+  );
+
+  --scale-start: 0.5;
+  --scale-end: 1.001;
+  --hover-offset: 5%;
+  --ease-elastic: linear(
+    0, 0.186 2.1%, 0.778 7.2%, 1.027 9.7%, 1.133, 1.212, 1.264, 1.292 15.4%,
+    1.296, 1.294, 1.285, 1.269 18.9%, 1.219 20.9%, 1.062 25.8%, 0.995 28.3%,
+    0.944 31.1%, 0.93, 0.921, 0.92 35.7%, 0.926, 0.94 39.7%, 1.001 47%, 1.014,
+    1.021 52.4%, 1.02 56.4%, 1 65.5%, 0.994 70.7%, 1.001 88.4%, 1
+  );
+  --ease-bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --scale-start: var(--scale-end);
+    --ease-elastic: ease-out;
+    --ease-bounce-out: ease-out;
+    --hover-offset: 0;
+  }
+}
+
+
+body {
+  font-family: "Imbue", serif;
+  padding-inline: 1rem;
+  font-weight: 700;
+  font-size: calc(1rem + 10vmin);
+  text-align: center;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  gap: 0.2em;
+  font-size: 0.5em;
+  -webkit-margin-before: calc(50vh - 1ex);
+          margin-block-start: calc(50vh - 1ex);
+}
+
+.intro span {
+  display: inline-block;
+}
+
+.intro span:first-child {
+  transform-origin: right bottom;
+  -webkit-animation: wave 250ms 1s ease 3;
+          animation: wave 250ms 1s ease 3;
+}
+
+.intro span:last-child {
+  -webkit-animation: hover 500ms linear infinite;
+          animation: hover 500ms linear infinite;
+}
+
+.box {
+  margin-block: 80vh;
+}
+
+.text {
+  margin-inline: auto;
+  padding-block: 0.2em;
+  max-inline-size: 15ch;
+  text-wrap: balance;
+  background-image: var(--gradient);
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@supports (animation-timeline: view()) {
+  .box {
+    -webkit-animation: trigger steps(1) both, fade linear both;
+            animation: trigger steps(1) both, fade linear both;
+    animation-timeline: view();
+    animation-range: entry 80% contain 40%;
+  }
+
+  .text {
+    -webkit-animation: pop-back 500ms var(--ease-bounce-out) forwards;
+            animation: pop-back 500ms var(--ease-bounce-out) forwards;
+  }
+
+  @container style(--animate: true) {
+    .text {
+      -webkit-animation: pop 600ms var(--ease-elastic) forwards,
+        text-gradient 1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+              animation: pop 600ms var(--ease-elastic) forwards,
+        text-gradient 1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+    }
+  }
+}
+
+.text2 {
+  font-family: "Work Sans", sans-serif;
+  font-weight:300;
+  font-size: 15px;
+  color: rgb(255, 77, 77);
+}
+
+.smile {
+  width: 1em;
+  margin-inline: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-margin-after: calc(50vh - 1ex);
+          margin-block-end: calc(50vh - 1ex);
+}
+
+.smile div {
+  display: flex;
+  -webkit-animation: wink 1s steps(1) infinite;
+          animation: wink 1s steps(1) infinite;
+}
+
+.smile span {
+  display: inline-block;
+  width: 1em;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes trigger {
+  to {
+    --animate: true;
+  }
+}
+
+@keyframes trigger {
+  to {
+    --animate: true;
+  }
+}
+
+@-webkit-keyframes pop {
+  from {
+    scale: var(--scale-start);
+  }
+  to {
+    scale: var(--scale-end);
+  }
+}
+
+@keyframes pop {
+  from {
+    scale: var(--scale-start);
+  }
+  to {
+    scale: var(--scale-end);
+  }
+}
+
+@-webkit-keyframes text-gradient {
+  100% {
+    background-position: 150% center;
+  }
+}
+
+@keyframes text-gradient {
+  100% {
+    background-position: 150% center;
+  }
+}
+
+@-webkit-keyframes pop-back {
+  from {
+    scale: var(--scale-end);
+  }
+  to {
+    color: var(--color);
+    scale: var(--scale-start);
+  }
+}
+
+@keyframes pop-back {
+  from {
+    scale: var(--scale-end);
+  }
+  to {
+    color: var(--color);
+    scale: var(--scale-start);
+  }
+}
+
+@-webkit-keyframes wink {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  25%,
+  75% {
+    translate: -100% 0;
+  }
+  50% {
+    translate: -200% 0;
+  }
+}
+
+@keyframes wink {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  25%,
+  75% {
+    translate: -100% 0;
+  }
+  50% {
+    translate: -200% 0;
+  }
+}
+
+@-webkit-keyframes wave {
+  50% {
+    rotate: 10deg;
+  }
+}
+
+@keyframes wave {
+  50% {
+    rotate: 10deg;
+  }
+}
+
+@-webkit-keyframes hover {
+  from,
+  to {
+    translate: 0 calc(var(--hover-offset) * -1);
+  }
+  50% {
+    translate: 0 var(--hover-offset);
+  }
+}
+
+@keyframes hover {
+  from,
+  to {
+    translate: 0 calc(var(--hover-offset) * -1);
+  }
+  50% {
+    translate: 0 var(--hover-offset);
+  }
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000;
+}
+
+.cake-whole {
+  width: 100%;
+  height: 400vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.cake {
+  position: relative;
+}
+
+.cake div {
+  position: relative;
+  transition: all 0.65s;
+  margin: 0 auto;
+}
+
+.cake .dot {
+  position: absolute;
+  top: -15%;
+  left: 45.7%;
+  z-index: 2;
+}
+
+.cake .strawberry {
+  width: 55px;
+  height: 65px;
+  background-color: #d52d2d;
+  border-radius: 100% 100% 90% 90%;
+}
+
+.cake .cream {
+  width: 250px;
+  height: 60px;
+  background-color: #fffcfb;
+  border-radius: 20px;
+}
+
+.cake .cream2 {
+  width: 245px;
+  height: 35px;
+  position: relative;
+  background-color: #ffdc9c;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.cake .cream2::before {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 65%);
+  border-radius: 10px;
+  background-color: #fff3ee;
+}
+
+.cake .cream2 .cream-melt {
+  position: absolute;
+  right: 45%;
+  bottom: 110px; 
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px;
+  border-color: #fceeec transparent transparent transparent;
+  border-radius: 50%; 
+}
+
+.cake .cream2 .cream-melt:nth-child(1) {
+  transform: translate(0, 100%);
+  right: -15px;
+}
+
+.cake .cream2 .cream-melt:nth-child(2) {
+  transform: translate(40px, 100%);
+  right: 65px;
+}
+
+.cake .cream2 .cream-melt:nth-child(3) {
+  transform: translate(80px, 100%);
+  right: 145px;
+}
+
+.cake .cream2 .cream-melt:nth-child(4) {
+  transform: translate(120px, 100%);
+  right: 225px; 
+}
+
+.cake .cream2 .cream-melt:nth-child(5) {
+  transform: translate(120px, 100%);
+  right: 265px; 
+}
+
+.cake .cream2 .cream-melt:nth-child(6) {
+  transform: translate(120px, 100%);
+  right: 305px; 
+}
+
+.cake .jam {
+  width: 240px;
+  height: 20px;
+  position: relative;
+  background-color: #d52d2d;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.cake .cream3 {
+  width: 250px;
+  height: 40px;
+  background-color: #fff8f7;
+  border-radius: 6px;
+}
+
+.cake .bread-bottom {
+  width: 250px;
+  height: 35px;
+  background-color: #ffdc9c;
+  border-radius: 7% 7% 9px 9px;
+}
+
+.color-scroll {
+  height: 5000vw;
+  transition: background-color 200ms ease;
+}
+.color-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+footer {
+  padding: 20px;
+  text-align: right;
+  position: fixed; 
+  bottom: 0;
+  right: 1px;
+  font-size: 80px;
+  transition: opacity 0.5s ease-in-out; 
+}
+
